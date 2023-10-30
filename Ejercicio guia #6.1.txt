@@ -29,8 +29,8 @@ void *AtenderCliente (void *socket)
 		ret = read (sock_conn, peticion, sizeof(peticion));
 		printf ("Recibido\n");
 		
-		//Tenemos que a￱adirle la marca de fin de string
-		//para que no escriba lo que hay despu￩s en el buffer
+		//Tenemos que a￱ñadirle la marca de fin de string
+		//para que no escriba lo que hay despues en el buffer
 		peticion[ret] = '\0';
 		
 		printf ("Peticion: %s\n", peticion);
@@ -86,7 +86,7 @@ void *AtenderCliente (void *socket)
 				pthread_mutex_unlock (&mutex); //ya puedes interrumpirme
 			}
 		}
-		//se acab￳ el servicio para este cliente
+		//se acab￳a el servicio para este cliente
 		close (sock_conn);
 	}
 }
